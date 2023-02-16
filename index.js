@@ -14,6 +14,24 @@ const leftHand = document.getElementById("left-hand")
 const rightHand = document.getElementById("right-hand")
 const winner = document.getElementById("winner")
 
+function noWinner() {
+    winner.textContent = "no winner!"
+    leftHand.style.backgroundColor = "yellow"
+    rightHand.style.backgroundColor = "yellow"
+}
+
+function player1Win() {
+    winner.textContent = "player1 win!"
+    leftHand.style.backgroundColor = "green"
+    rightHand.style.backgroundColor = "red"
+}
+
+function player2Win() {
+    winner.textContent = "player2 win!"
+    leftHand.style.backgroundColor = "red"
+    rightHand.style.backgroundColor = "green"
+}
+
 function play() {
     let player1 = Math.floor(Math.random()*3)
     if (player1 === 0) {
@@ -40,41 +58,23 @@ function play() {
     }
 
     if (player1 === 0 && player2 ===1) {
-        winner.textContent = "player2 win!"
-        leftHand.style.backgroundColor = "red"
-        rightHand.style.backgroundColor = "green"
+        player2Win()
     } else if (player1 === 0 && player2 === 2) {
-        winner.textContent = "player1 win!"
-        leftHand.style.backgroundColor = "green"
-        rightHand.style.backgroundColor = "red"
+        player1Win()
     } else if (player1 === 0 && player2 === 0) {
-        winner.textContent = "no winner!"
-        leftHand.style.backgroundColor = "yellow"
-        rightHand.style.backgroundColor = "yellow"
+        noWinner()
     } else if (player1 === 1 && player2 === 0) {
-        winner.textContent = "player1 win!"
-        leftHand.style.backgroundColor = "green"
-        rightHand.style.backgroundColor = "red"
+        player1Win()
     } else if (player1 === 1 && player2 === 1) {
-        winner.textContent = "no winner!"
-        leftHand.style.backgroundColor = "yellow"
-        rightHand.style.backgroundColor = "yellow"
+        noWinner()
     } else if (player1 === 1 && player2 === 2) {
-        winner.textContent = "player2 win!"
-        leftHand.style.backgroundColor = "red"
-        rightHand.style.backgroundColor = "green"
+        player2Win()
     } else if (player1 === 2 && player2 === 0) {
-        winner.textContent = "player2 win!"
-        leftHand.style.backgroundColor = "red"
-        rightHand.style.backgroundColor = "green"
+        player2Win()
     } else if (player1 === 2 && player2 === 1) {
-        winner.textContent = "player1 win!"
-        leftHand.style.backgroundColor = "green"
-        rightHand.style.backgroundColor = "red"
+        player1Win()
     } else if (player1 === 2 && player2 === 2) {
-        winner.textContent = "no winner!"
-        leftHand.style.backgroundColor = "yellow"
-        rightHand.style.backgroundColor = "yellow"
+        noWinner()
     }
 }
 

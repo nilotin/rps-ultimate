@@ -41,21 +41,40 @@ function play() {
 
     if (player1 === 0 && player2 ===1) {
         winner.textContent = "player2 win!"
+        leftHand.style.backgroundColor = "red"
+        rightHand.style.backgroundColor = "green"
     } else if (player1 === 0 && player2 === 2) {
         winner.textContent = "player1 win!"
+        leftHand.style.backgroundColor = "green"
+        rightHand.style.backgroundColor = "red"
     } else if (player1 === 0 && player2 === 0) {
         winner.textContent = "no winner!"
+        leftHand.style.backgroundColor = "yellow"
+        rightHand.style.backgroundColor = "yellow"
     } else if (player1 === 1 && player2 === 0) {
         winner.textContent = "player1 win!"
+        leftHand.style.backgroundColor = "green"
+        rightHand.style.backgroundColor = "red"
     } else if (player1 === 1 && player2 === 1) {
         winner.textContent = "no winner!"
+        leftHand.style.backgroundColor = "yellow"
+        rightHand.style.backgroundColor = "yellow"
     } else if (player1 === 1 && player2 === 2) {
         winner.textContent = "player2 win!"
+        leftHand.style.backgroundColor = "red"
+        rightHand.style.backgroundColor = "green"
     } else if (player1 === 2 && player2 === 0) {
         winner.textContent = "player2 win!"
+        leftHand.style.backgroundColor = "red"
+        rightHand.style.backgroundColor = "green"
     } else if (player1 === 2 && player2 === 1) {
         winner.textContent = "player1 win!"
+        leftHand.style.backgroundColor = "green"
+        rightHand.style.backgroundColor = "red"
     } else if (player1 === 2 && player2 === 2) {
         winner.textContent = "no winner!"
+        leftHand.style.backgroundColor = "yellow"
+        rightHand.style.backgroundColor = "yellow"
     }
 }
+

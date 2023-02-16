@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+/* img {
+    display: inline;
+    height: 50%;
+}
+
+.row {
+    height: 500px;
+} */
+
+.container {
+    height: 500px;
+}
+
+#left-hand {
+    background-color: azure;
+}
+
+#right-hand {
+    background-color: antiquewhite;
+}
